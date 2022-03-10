@@ -10,7 +10,7 @@ sentry-cli $release files vance-dance delete --all
 
 sentry-cli $release new vance-dance --finalize
 
-sentry-cli $release files vance-dance upload-sourcemaps ./dist/assets/*.map ./dist/assets/*.js --url-prefix "~/_nuxt"
+sentry-cli $release files vance-dance upload-sourcemaps ./dist/_nuxt/*.map ./dist/_nuxt/*.js --url-prefix "~/_nuxt"
 
 for path in ./dist/_nuxt/*.js; do
   sed -i '$ d' "$path"
